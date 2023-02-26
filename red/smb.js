@@ -13,7 +13,7 @@ limitations under the License.
 /* jshint node: true, esversion: 6 */
 "use strict";
 
-const SMB = require('@marsaud/smb2');
+const SMB = require('v9u-smb2');
 
 /**
  * Handles pre-1.0 Node-RED gracefully
