@@ -1,5 +1,6 @@
 /*
 Copyright 2018 Smart-Tech Controle e Automação
+Copyright 2023 Y., Ryota <tryjsky@gmail.com>
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
 You may obtain a copy of the License at
@@ -74,9 +75,7 @@ module.exports = function (RED) {
 
             readdir.then((data) => {
                 callback(null, data);
-            });
-
-            readdir.catch((err) => {
+            }).catch((err) => {
                 callback(err);
                 connect();
             });
@@ -87,9 +86,7 @@ module.exports = function (RED) {
 
             readFile.then((data) => {
                 callback(null, data);
-            });
-
-            readFile.catch((err) => {
+            }).catch((err) => {
                 callback(err);
                 connect();
             });
@@ -101,9 +98,7 @@ module.exports = function (RED) {
 
             unlink.then(() => {
                 callback(null);
-            });
-
-            unlink.catch((err) => {
+            }).catch((err) => {
                 callback(err);
                 connect();
             });
@@ -116,9 +111,7 @@ module.exports = function (RED) {
 
             rename.then(() => {
                 callback(null);
-            });
-
-            rename.catch((err) => {
+            }).catch((err) => {
                 callback(err);
                 connect();
             });
@@ -135,9 +128,7 @@ module.exports = function (RED) {
 
             writeFile.then(() => {
                 callback(null);
-            });
-
-            writeFile.catch((err) => {
+            }).catch((err) => {
                 callback(err);
                 connect();
             });
@@ -149,9 +140,7 @@ module.exports = function (RED) {
 
             mkdir.then(() => {
                 callback(null);
-            });
-
-            mkdir.catch((err) => {
+            }).catch((err) => {
                 callback(err);
                 connect();
             });
@@ -163,9 +152,7 @@ module.exports = function (RED) {
 
             rmdir.then(() => {
                 callback(null);
-            });
-
-            rmdir.catch((err) => {
+            }).catch((err) => {
                 callback(err);
                 connect();
             });
@@ -177,9 +164,7 @@ module.exports = function (RED) {
 
             exists.then((data) => {
                 callback(null, data);
-            });
-
-            exists.catch((err) => {
+            }).catch((err) => {
                 callback(err);
                 connect();
             });
@@ -210,9 +195,7 @@ module.exports = function (RED) {
 
             ensureDir.then(() => {
                 callback(null);
-            });
-
-            ensureDir.catch((err) => {
+            }).catch((err) => {
                 callback(err);
                 connect();
             });
