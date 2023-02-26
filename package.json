@@ -1,5 +1,5 @@
 {
-  "name": "node-red-contrib-smb",
+  "name": "node-red-contrib-smb2",
   "version": "1.2.0",
   "description": "Node-RED for the SMB protocol",
   "main": "index.js",
@@ -15,9 +15,13 @@
       "SMB": "red/smb.js"
     }
   },
-  "author": "ST-One Ltda.",
+  "author": {
+    "name": "Y., Ryota",
+    "email": "tryjsky@gmail.com",
+    "url": "https://github.com/tryjsky"
+  },
   "license": "Apache-2.0",
   "dependencies": {
-    "@marsaud/smb2": "^0.17.1"
+    "v9u-smb2": "^1.0.6"
   }
 }
