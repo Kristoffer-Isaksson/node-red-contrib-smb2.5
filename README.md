@@ -1,4 +1,4 @@
-# node-red-contrib-smb
+# node-red-contrib-smb2
 
 A Node-RED node to access files of Windows' shares over the network using the SMBv2 Protocol
 
@@ -11,16 +11,17 @@ You can install this node directly from the "Manage Palette" menu in the Node-RE
 by running the following command in your Node-RED user directory - typically `~/.node-red` on Linux 
 or `%HOMEPATH%\.nodered` on Windows
 
-    npm install node-red-contrib-smb
+    npm install node-red-contrib-smb2
 
 
 
 ## Bugs and enhancements
 
-Please share your ideas and experiences on the [Node-RED forum](https://discourse.nodered.org/), or open an issue on the [page of the project on GitHub](https://github.com/netsmarttech/node-red-contrib-smb)
+Please open an issue on the [page of the project on GitHub](https://github.com/tryjsky/node-red-contrib-smb2)
 
 
 ## License
 
 
 Copyright 2018-2020 ST-One Ltda., [Apache 2.0 license](LICENSE).
+Copyright 2023 Y., Ryota, [Apache 2.0 license](LICENSE).
