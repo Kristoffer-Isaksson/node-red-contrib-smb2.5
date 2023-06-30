@@ -14,7 +14,7 @@ limitations under the License.
 /* jshint node: true, esversion: 6 */
 "use strict";
 
-const SMB = require('v9u-smb2');
+const SMB = require('@tryjsky/v9u-smb2');
 
 /**
  * Handles pre-1.0 Node-RED gracefully
