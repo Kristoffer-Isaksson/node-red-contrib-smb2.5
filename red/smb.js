@@ -32,22 +32,23 @@ function nrInputShim(node, fn) {
 module.exports = function (RED) {
 
     function SmbConfig(values) {
+        RED.nodes.createNode(this, values);
+
         let self = this;
+
         var _a, _b;
-        var sysCfg = ((_b = (_a = node.context()) === null || _a === void 0 ? void 0 : _a.global) === null || _b === void 0 ? void 0 : _b.get("SYSCONFIG")) || {};
+        var sysCfg = ((_b = (_a = self.context()) === null || _a === void 0 ? void 0 : _a.global) === null || _b === void 0 ? void 0 : _b.get("SYSCONFIG")) || {};
         var sambaCfg = (sysCfg === null || sysCfg === void 0 ? void 0 : sysCfg.samba) || {};
-        
+
         var address = (sambaCfg === null || sambaCfg === void 0 ? void 0 : sambaCfg.address);
         var domain = (sambaCfg === null || sambaCfg === void 0 ? void 0 : sambaCfg.domain);
         var username = (sambaCfg === null || sambaCfg === void 0 ? void 0 : sambaCfg.username);
         var password = (sambaCfg === null || sambaCfg === void 0 ? void 0 : sambaCfg.password);
 
-        RED.nodes.createNode(self, values);
-
-        self.share = address || values.share;
+        self.share = address || values.share || "";
         self.domain = domain || values.domain || ".";
-        self.username = username || self.credentials.username || "";
-        self.password = password || self.credentials.password || "";
+        self.username = username || values.username || "";
+        self.password = password || values.password ||  "";
         self.autoCloseTimeout = 0;
 
         self.on("close", (done) => {
@@ -208,16 +209,7 @@ module.exports = function (RED) {
             });
         };
     }
-    RED.nodes.registerType("smb config", SmbConfig, {
-        credentials: {
-            username: {
-                type: "text"
-            },
-            password: {
-                type: "password"
-            }
-        }
-    });
+    RED.nodes.registerType("smb config", SmbConfig);
 
     function SmbFunction(values) {
 
