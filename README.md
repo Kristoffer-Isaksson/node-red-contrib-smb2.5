@@ -24,5 +24,7 @@ Please open an issue on the [page of the project on GitHub](https://github.com/D
 
 
 Copyright 2018-2020 ST-One Ltda., [Apache 2.0 license](LICENSE).
+
 Copyright 2023 Y., Ryota, [Apache 2.0 license](LICENSE).
+
 Copyright 2024 Delevin888, [Apache 2.0 license](LICENSE).
