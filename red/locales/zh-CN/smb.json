@@ -29,7 +29,8 @@
             "mkdir": "创建目录",
             "rmdir": "删除目录",
             "exists": "存在",
-            "ensure-dir": "确保目录"
+            "ensure-dir": "确保目录",
+            "info": "目标文件/文件夹信息"
         },
         "format": {
             "string": "一个UTF-8字符串",

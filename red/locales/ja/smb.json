@@ -29,7 +29,8 @@
             "mkdir": "ディレクトリの作成",
             "rmdir": "ディレクトリの削除",
             "exists": "指定パスの存在確認",
-            "ensure-dir": "Ensure dir"
+            "ensure-dir": "Ensure dir",
+            "info": "ファイル情報"
         },
         "format": {
             "string": "UTF-8 文字列",

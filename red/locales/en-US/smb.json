@@ -29,7 +29,8 @@
             "mkdir": "Create directory",
             "rmdir": "Remove directory",
             "exists": "Exists",
-            "ensure-dir": "Ensure dir"
+            "ensure-dir": "Ensure dir",
+            "info": "Info"
         },
         "format": {
             "string": "a UTF-8 String",

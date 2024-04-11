@@ -208,6 +208,24 @@ module.exports = function (RED) {
                 connect();
             });
         };
+
+        self.info = function info(path, callback) {
+
+            let status = self.smbClient.stat(path);
+
+            status.then((data) => {
+                callback(null, {
+                    birthtime: data.birthtime,
+                    mtime: data.mtime,
+                    atime: data.atime,
+                    ctime: data.ctime,
+                    isDirectory: data.isDirectory()
+                });
+            }).catch((err) => {
+                callback(err);
+                connect();
+            });
+        };
     }
     RED.nodes.registerType("smb config", SmbConfig);
 
@@ -438,6 +456,23 @@ module.exports = function (RED) {
                             return;
                         }
 
+                        node.statusDone();
+                        send(msg);
+                        done();
+                    });
+
+                    break;
+
+                case "info":
+                    node.statusProcess();
+                    node.config.info(filename, (err, data) => {
+                        
+                        if (err) {
+                            node.statusError();
+                            done(err);
+                            return;
+                        }
+                        msg.payload = data;
                         node.statusDone();
                         send(msg);
                         done();
