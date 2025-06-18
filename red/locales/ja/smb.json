@@ -17,6 +17,7 @@
             "domain": "domain.local",
             "username": "username",
             "password": "password",
+            "timeout":  "Timeout (ms)",
             "path": "some\\path",
             "path-new": "another\\new\\path"
         },

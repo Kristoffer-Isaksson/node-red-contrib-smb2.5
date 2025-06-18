@@ -17,6 +17,7 @@
             "domain": "域.local",
             "username": "用户名",
             "password": "密码",
+            "timeout": "超时（毫秒",
             "path": "一些\\路径",
             "path-new": "另一个\\新\\路径"
         },

@@ -44,15 +44,16 @@ module.exports = function (RED) {
         var domain = (sambaCfg === null || sambaCfg === void 0 ? void 0 : sambaCfg.domain);
         var username = (sambaCfg === null || sambaCfg === void 0 ? void 0 : sambaCfg.username);
         var password = (sambaCfg === null || sambaCfg === void 0 ? void 0 : sambaCfg.password);
+        var timeout = (sambaCfg === null || sambaCfg === void 0 ? void 0 : sambaCfg.timeout);
 
         self.share = address || values.share || "";
         self.domain = domain || values.domain || ".";
         self.username = username || values.username || "";
-        self.password = password || values.password ||  "";
-        self.autoCloseTimeout = 0;
+        self.password = password || values.password || "";
+        self.autoCloseTimeout = Number(timeout || values.timeout || 0);
 
         self.on("close", (done) => {
-            self.smbClient.disconnect();
+            if (self.smbClient) self.smbClient.disconnect();
             done();
         });
 
@@ -67,7 +68,7 @@ module.exports = function (RED) {
                 domain: self.domain,
                 username: self.username,
                 password: self.password,
-                autoCloseTimeout: 0
+                autoCloseTimeout: self.autoCloseTimeout
             });
         }
 
