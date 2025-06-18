@@ -6,6 +6,7 @@
             "domain": "ドメイン",
             "username": "ユーザ名",
             "password": "パスワード",
+            "timeout": "タイムアウト（ミリ秒）",
             "config": "SMB 設定",
             "operation": "操作",
             "path": "パス",

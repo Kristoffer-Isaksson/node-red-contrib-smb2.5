@@ -6,6 +6,7 @@
             "domain": "Domain",
             "username": "Username",
             "password": "Password",
+            "timeout": "Timeout (ms)",
             "config": "Config",
             "operation": "Operation",
             "path": "Path",

@@ -6,6 +6,7 @@
             "domain": "域",
             "username": "用户名",
             "password": "密码",
+            "timeout": "超时（毫秒",
             "config": "配置",
             "operation": "操作",
             "path": "路径",
